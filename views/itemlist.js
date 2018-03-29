@@ -1,7 +1,7 @@
 define([
     'app',
-    '../resources/js/init',
-    '../models/records'
+    'resources/js/init',
+    'models/records'
 ], function(app, init, records) {
     
     // + + + list met training data + + +
@@ -9,14 +9,14 @@ define([
         rows: [
             {
                 view: 'datatable',
-                id: 'itemList',
-                height: 200,
+                id: 'itemListId',
+                gravity: 1,
+                scroll: true,
                 columns: [
-                    {id:id, header:'ID', width:'10%'},
-                    {id:title, header:'Titel', width:'30%'},
-                    {id:summary, header:'Samenvatting', width:'60%'}
-                ],
-                autoConfig: true
+                    {id:'item_id', header:'ID', fillspace:1, minWidth:35},
+                    {id:'title', header:'Titel', fillspace:2, minWidth:140},
+                    {id:'summary', header:'Samenvatting', fillspace:9, minWidth:300}
+                ]
             }
         ]
     };
@@ -24,8 +24,7 @@ define([
     return {
         $ui: itemlist,
         $oninit: function(view) {
-            $$('itemList').parse(records.data);
-            
+            $$('itemListId').parse(records.data);
             console.log('records', records.data);
         }
     };

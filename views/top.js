@@ -1,7 +1,7 @@
 define([
     'app',
-    '../resources/js/init',
-    'itemlist'
+    'resources/js/init',
+    'views/itemlist'
 ], function(app, init, itemlist) {
     
     var ui = {
@@ -13,16 +13,14 @@ define([
                 type: 'header',
                 template: 'Header'
             },
-            {
-                itemlist
-            }
+            itemlist
         ]
     }
 
     return {
         $ui: ui,
         $oninit: function(view) {
-            console.log('Geladen');
+            console.log('top geladen');
         }
     };
     

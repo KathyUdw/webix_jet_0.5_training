@@ -1,8 +1,8 @@
 // App configuration
 
 define([
-    '../libs/webix-mvc-core/core',
-    '../libs/webix-mvc-core/plugins/menu'
+    'libs/webix-mvc-core/core',
+    'libs/webix-mvc-core/plugins/menu'
 ], function(core, menu) {
     
     // Configuration
