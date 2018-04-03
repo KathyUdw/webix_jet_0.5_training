@@ -1,19 +1,18 @@
 define([
     'app',
     'resources/js/init',
-    'views/itemlist'
-], function(app, init, itemlist) {
+    'views/itemlist',
+    'views/itemform'
+], function(app, init, itemlist, itemform) {
     
     var ui = {
         id: 'trainingView',
         view: 'layout',
         type: 'clean',
-        rows: [
-            {
-                type: 'header',
-                template: 'Header'
-            },
-            itemlist
+        scroll: true,
+        cols: [
+            itemlist,
+            itemform
         ]
     }
 
